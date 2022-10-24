@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Book i dag</title>
+        <meta charset="UTF-8">
+        <style>
+        .bakgrunn{
+            margin: 0;
+            padding: 0%;
+            font-family: sans-serif;
+        }
+        .banner{
+            min-height: 100%;
+            min-width: 1024px;
+
+
+            width: 100%;
+            height: auto;
+            background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(./Bilder/Restaurant.jpg);
+            
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .navigationbar{
+            width: 85%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo{
+            width: 120px;
+            cursor: pointer;
+        }
+        .navigationbar ul li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+        .navigationbar ul li a{
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+        }
+        .navigationbar ul li::after{
+            content: '';
+            height: 3px;
+            width: 0;
+            background: orange;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+        .navigationbar ul li:hover::after{
+            width: 100%;
+        }
+        .content{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: white;
+        }
+        .content h1{
+            font-size: 70px;
+            margin-top: 80px;
+        }
+        .content p{
+            margin: 20px auto;
+            font-weight: 100;
+            line-height: 25px;
+        }
+        button{
+            width: 200px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid orange;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        span{
+            background: orange;
+            height: 100%;
+            width: 0;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        button:hover span{
+            width: 100%;
+        }
+        button:hover{
+            border: none;
+        }
+        </style>
+    </head>
+    
+    
+    <body>
+        <div class="banner">
+            <div class="navigationbar">
+                <ul>
+                    <li><a href="#">Book</a></li>
+                    <li><a href="Meny.html">Meny</a></li>
+                    <li><a href="#">Om oss</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1>Book bord hos oss i dag</h1>
+                <p>5/5 på tripAdvisor. Maten vår er lagd fra bunnen av og med ferske ingredisenser.</p>
+                <div>
+                    <a href="Meny.html"> <button type="button"><span></span>Book bord</button></a>
+                    <a href="Meny.html"> <button type="button"><span></span>Meny</button></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
